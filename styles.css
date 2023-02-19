@@ -109,43 +109,6 @@ select{
     border: 0.05px solid #e0e0e0;
 }
 
-/* When the screen size is from 0-600 i.e., smaller/mobile screen */
-@media only screen and (max-width: 600px){
-    .navbar__menu_container .user_icon{
-        display:flex;
-    }
-
-    .link{
-        display:none;
-    }
-
-    .hero__section{
-        min-height: 80vh;
-    }
-
-    .hero__section_container{
-        flex-direction: column;
-        background-color: transparent;
-        width:100%;
-        height:calc(80vh - 60px); 
-    }
-
-    .input_container_location,
-    .input_container_search{
-    padding:18px;
-    border-radius: 10px;
-    width:98%;
-    }
-    
-    .hero__section_title{
-        font-size: 18px;
-        width:95%;
-    }
-    
-}
-
-/* Out of media queries */
-
 .container__we__offer{
     margin: 3rem auto;
     width:90%;
@@ -193,6 +156,7 @@ select{
 .collections h1{
     font-weight: 400;
     padding-left: 250px;
+    padding-right: 250px;
     font-size: 35px;
 }
 
@@ -316,9 +280,6 @@ select{
     padding-top: 60px;
 }
 
-.left img{
-}
-
 .get__the_app .semicontainer .right{
     flex:3;
     height: 100%;
@@ -400,5 +361,63 @@ select{
 
 .right .download__app_container div img{
     width:35%;
+}
+
+/* When the screen size is from 0-600 i.e., smaller/mobile screen */
+@media only screen and (max-width: 600px){
+    .navbar__menu_container .user_icon{
+        display:flex;
+    }
+
+    .link{
+        display:none;
+    }
+
+    .hero__section{
+        min-height: 80vh;
+    }
+
+    .hero__section_container{
+        flex-direction: column;
+        background-color: transparent;
+        width:100%;
+        height:calc(80vh - 60px); 
+    }
+
+    .input_container_location,
+    .input_container_search{
+    padding:18px;
+    border-radius: 10px;
+    width:98%;
+    }
+    
+    .hero__section_title{
+        font-size: 18px;
+        width:95%;
+    }
+    
+}
+
+/* Out of media queries */
+
+/* media queries for download app */
+@media only screen and (max-width: 1300px){
+    .get__the_app .semicontainer .left,
+    .get__the_app .semicontainer .right{
+       flex:1;  /* left will take 50% and right will take 50% */ 
+    }
+    .get__the_app .semicontainer{
+        width:80%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .get__the_app{
+        padding:2rem 0;
+    }
+    .get__the_app .semicontainer{
+        width:95%;
+        flex-direction: column;
+    }
 }
 
